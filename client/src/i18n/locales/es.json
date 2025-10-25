@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "mission": "Misión",
+    "campaigns": "Campañas",
+    "contact": "Contacto",
+    "donate": "Donar Ahora"
+  },
+  "home": {
+    "hero": {
+      "title": "Juntos, Traemos Esperanza a Cada Corazón",
+      "subtitle": "Gift of Hope es una organización sin fines de lucro que ayuda a familias a través de alimentos, educación y atención médica. Cada acto de bondad puede cambiar una vida.",
+      "donateBtn": "Donar Ahora",
+      "storyBtn": "Nuestra Historia"
+    },
+    "stats": {
+      "meals": "Comidas Entregadas",
+      "children": "Niños Educados",
+      "families": "Familias Apoyadas"
+    },
+    "impact": {
+      "title": "Nuestro Trabajo en Acción",
+      "subtitle": "Vea la diferencia real que hacen sus contribuciones en comunidades de todo el mundo"
+    }
+  },
+  "donate": {
+    "title": "Haz Tu Contribución",
+    "subtitle": "Cada donación crea un impacto real y medible en comunidades de todo el mundo",
+    "chooseImpact": "Elige Tu Impacto",
+    "yourName": "Tu Nombre",
+    "amount": "Monto de Donación",
+    "minDonation": "Donación mínima",
+    "whyGive": "¿Por Qué Donar Con Nosotros?",
+    "secure": "Seguro y Protegido",
+    "impactExamples": "Ejemplos de Tu Impacto"
+  },
+  "contact": {
+    "title": "Ponte en Contacto",
+    "subtitle": "Nos encantaría saber de ti. ¡Contáctanos en cualquier momento!",
+    "form": {
+      "name": "Tu Nombre",
+      "email": "Tu Correo Electrónico",
+      "subject": "Asunto",
+      "message": "Tu Mensaje",
+      "send": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "success": "¡Mensaje Enviado Exitosamente!"
+    }
+  },
+  "footer": {
+    "about": "Acerca de Nosotros",
+    "mission": "Nuestra Misión",
+    "impact": "Nuestro Impacto",
+    "contact": "Contacto",
+    "privacy": "Política de Privacidad",
+    "donate": "Donar Ahora"
+  }
+}

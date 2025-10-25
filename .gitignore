@@ -1,0 +1,30 @@
+node_modules/
+.env
+*.log
+dist/
+client/dist/
+.vercel
+.local/
+attached_assets/
+*.md~
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+VERCEL_DEPLOYMENT_GUIDE.md
+
+# Screenshots and images
+*.png
+*.jpg
+*.jpeg
+!client/public/**/*.png
+!client/public/**/*.jpg
+
+# Build artifacts
+*.tsbuildinfo
+.vite/
+
+# Editor
+.idea/
+.vscode/
+*.sublime-*

@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À Propos",
+    "mission": "Mission",
+    "campaigns": "Campagnes",
+    "contact": "Contact",
+    "donate": "Faire un Don"
+  },
+  "home": {
+    "hero": {
+      "title": "Ensemble, Nous Apportons l'Espoir à Chaque Cœur",
+      "subtitle": "Gift of Hope est une organisation à but non lucratif qui aide les familles grâce à l'alimentation, l'éducation et les soins de santé. Chaque acte de gentillesse peut changer une vie.",
+      "donateBtn": "Faire un Don",
+      "storyBtn": "Notre Histoire"
+    },
+    "stats": {
+      "meals": "Repas Distribués",
+      "children": "Enfants Éduqués",
+      "families": "Familles Soutenues"
+    },
+    "impact": {
+      "title": "Notre Travail en Action",
+      "subtitle": "Voyez la vraie différence que font vos contributions dans les communautés du monde entier"
+    }
+  },
+  "donate": {
+    "title": "Faites Votre Contribution",
+    "subtitle": "Chaque don crée un impact réel et mesurable dans les communautés du monde entier",
+    "chooseImpact": "Choisissez Votre Impact",
+    "yourName": "Votre Nom",
+    "amount": "Montant du Don",
+    "minDonation": "Don minimum",
+    "whyGive": "Pourquoi Donner Avec Nous?",
+    "secure": "Sûr et Sécurisé",
+    "impactExamples": "Exemples de Votre Impact"
+  },
+  "contact": {
+    "title": "Contactez-Nous",
+    "subtitle": "Nous aimerions avoir de vos nouvelles. Contactez-nous à tout moment!",
+    "form": {
+      "name": "Votre Nom",
+      "email": "Votre Email",
+      "subject": "Sujet",
+      "message": "Votre Message",
+      "send": "Envoyer le Message",
+      "sending": "Envoi...",
+      "success": "Message Envoyé avec Succès!"
+    }
+  },
+  "footer": {
+    "about": "À Propos de Nous",
+    "mission": "Notre Mission",
+    "impact": "Notre Impact",
+    "contact": "Contact",
+    "privacy": "Politique de Confidentialité",
+    "donate": "Faire un Don"
+  }
+}

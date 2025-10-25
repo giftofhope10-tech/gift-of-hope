@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Gift of Hope - Global nonprofit empowering families through food, education & healthcare. Donate securely online via PayPal to make a real impact worldwide." />
+    <meta name="keywords" content="donate now, online donation, charity website, nonprofit organization, help poor families, support humanitarian cause, make donation PayPal, give hope, help children in need, global charity, donate for education, donate food programs, donate healthcare, help orphan children, support refugees, international relief fund, disaster relief, clean water donation, gift of hope charity, humanitarian aid, poverty relief, community support, transparent donations, secure online giving" />
+    <meta name="author" content="Gift of Hope" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="https://giftofhope.online/" />
+    
+    <!-- Favicons and Icons -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" href="/logo.webp" />
+    <link rel="apple-touch-icon" href="/favicon.svg" />
+    <link rel="mask-icon" href="/favicon.svg" color="#8B5CF6" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://giftofhope.online/" />
+    <meta property="og:title" content="Gift of Hope | Donate to Empower Communities Worldwide" />
+    <meta property="og:description" content="Join our global mission to provide food, education, and healthcare to families in need. Every donation makes a lasting impact." />
+    <meta property="og:image" content="https://giftofhope.online/images/aid-worker-delivery.webp" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content="Donate Now" />
+    <meta property="og:locale" content="en_US" />
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://giftofhope.online/" />
+    <meta name="twitter:title" content="Gift of Hope | Global Nonprofit Empowering Communities" />
+    <meta name="twitter:description" content="Make a difference today. Donate to support food, education & healthcare programs for families worldwide." />
+    <meta name="twitter:image" content="https://giftofhope.online/images/aid-worker-delivery.webp" />
+    
+    <!-- Performance hints for external domains -->
+    <link rel="preconnect" href="https://www.paypal.com" crossorigin>
+    <link rel="preconnect" href="https://www.paypalobjects.com" crossorigin>
+    <link rel="dns-prefetch" href="https://api.exchangerate-api.com">
+    <link rel="dns-prefetch" href="https://ipapi.co">
+    
+    <!-- Inline Critical CSS for Above-the-Fold Content -->
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { 
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif; 
+        color: #0F172A; 
+        line-height: 1.7; 
+        -webkit-font-smoothing: antialiased; 
+        background: #fff; 
+        overflow-x: hidden;
+      }
+      #root { min-height: 100vh; width: 100%; }
+      .app { display: flex; flex-direction: column; min-height: 100vh; width: 100%; overflow-x: hidden; }
+      main { flex: 1; width: 100%; overflow-x: hidden; }
+      .page { width: 100%; overflow-x: hidden; }
+      .container { max-width: 1280px; margin: 0 auto; padding: 0 24px; width: 100%; }
+      
+      /* Navigation styles */
+      .navigation { 
+        background: rgba(255, 255, 255, 0.98); 
+        backdrop-filter: blur(20px); 
+        position: sticky; 
+        top: 0; 
+        z-index: 1000; 
+        border-bottom: 1px solid rgba(139, 92, 246, 0.08); 
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.03);
+      }
+      .nav-container { max-width: 1280px; margin: 0 auto; padding: 18px 24px; display: flex; justify-content: space-between; align-items: center; }
+      .nav-logo { display: flex; align-items: center; text-decoration: none; }
+      .logo-container { display: flex; align-items: center; gap: 14px; }
+      .logo-icon-svg { width: 32px; height: 32px; filter: drop-shadow(0 2px 8px rgba(139, 92, 246, 0.3)); }
+      .logo-text { 
+        font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; 
+        font-size: 26px; 
+        font-weight: 800; 
+        background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%); 
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+        background-clip: text; 
+        letter-spacing: -0.5px;
+      }
+      .nav-menu { display: flex; gap: 8px; align-items: center; }
+      .nav-link { 
+        text-decoration: none; 
+        color: #0F172A; 
+        font-weight: 600; 
+        padding: 11px 22px; 
+        border-radius: 10px; 
+        font-size: 15px; 
+        position: relative;
+        transition: all 0.3s;
+      }
+      .nav-link.btn-donate { 
+        background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%); 
+        color: white; 
+        box-shadow: 0 4px 14px rgba(139, 92, 246, 0.35); 
+        padding: 12px 28px; 
+        margin-left: 8px; 
+        font-weight: 700;
+      }
+      
+      /* Hero section - Critical for LCP */
+      .hero { 
+        background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); 
+        padding: 120px 24px; 
+        text-align: center; 
+        position: relative; 
+        overflow: hidden; 
+        min-height: 500px;
+      }
+      .hero-content { max-width: 900px; margin: 0 auto; position: relative; z-index: 1; }
+      .hero-content h1 { 
+        font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif; 
+        font-size: 64px; 
+        font-weight: 800; 
+        line-height: 1.1; 
+        margin-bottom: 24px; 
+        color: white; 
+        background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 100%); 
+        -webkit-background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+        background-clip: text;
+      }
+      .hero-subtitle { 
+        font-size: 20px; 
+        line-height: 1.8; 
+        color: #CBD5E1; 
+        margin-bottom: 40px; 
+        max-width: 700px; 
+        margin-left: auto; 
+        margin-right: auto; 
+      }
+      .hero-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+      .btn { 
+        padding: 14px 32px; 
+        border-radius: 16px; 
+        font-weight: 700; 
+        text-decoration: none; 
+        display: inline-block; 
+        border: none; 
+        cursor: pointer; 
+        font-size: 16px; 
+        transition: all 0.3s;
+      }
+      .btn-primary { 
+        background: linear-gradient(135deg, #8B5CF6 0%, #EC4899 100%); 
+        color: white; 
+        box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3); 
+      }
+      .btn-secondary { background: white; color: #8B5CF6; border: 2px solid #8B5CF6; }
+      .btn-large { padding: 16px 40px; font-size: 17px; }
+      
+      @media (max-width: 768px) { 
+        .hero { padding: 80px 20px; min-height: 400px; } 
+        .hero-content h1 { font-size: 40px; margin-bottom: 16px; } 
+        .hero-subtitle { font-size: 16px; margin-bottom: 24px; }
+        .btn-large { padding: 14px 32px; font-size: 16px; }
+      }
+      @media (max-width: 480px) {
+        .hero { padding: 60px 16px; min-height: 350px; }
+        .hero-content h1 { font-size: 32px; }
+        .hero-subtitle { font-size: 15px; }
+      }
+    </style>
+    
+    <!-- Preload critical resources - Hero image is LCP element -->
+    <link rel="preload" href="/images/aid-worker-delivery.webp" as="image" type="image/webp" fetchpriority="high">
+    
+    <!-- Load fonts asynchronously to avoid render blocking -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Inter:wght@400;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@800&family=Inter:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
+    
+    <meta name="theme-color" content="#8B5CF6" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Gift of Hope | Global Nonprofit - Donate to Help Families Worldwide</title>
+    
+    <!-- Google Analytics - Loaded after interaction to improve performance -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BHBQJKR9FP');
+      
+      // Load GA only after user interaction (scroll, click, or after 3s)
+      (function() {
+        var loaded = false;
+        function loadGA() {
+          if (loaded) return;
+          loaded = true;
+          var script = document.createElement('script');
+          script.async = true;
+          script.src = 'https://www.googletagmanager.com/gtag/js?id=G-BHBQJKR9FP';
+          document.head.appendChild(script);
+        }
+        ['scroll', 'click', 'touchstart'].forEach(function(event) {
+          document.addEventListener(event, loadGA, { once: true, passive: true });
+        });
+        setTimeout(loadGA, 3000);
+      })();
+    </script>
+    
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NGO",
+      "@id": "https://giftofhope.online/#organization",
+      "name": "Donate Now",
+      "url": "https://giftofhope.online",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://giftofhope.online/images/charity-work.webp",
+        "width": 600,
+        "height": 400
+      },
+      "description": "Global nonprofit organization empowering families worldwide through food distribution, education programs, and healthcare support. Together, we bring hope to every heart.",
+      "slogan": "Together, we bring hope to every heart",
+      "foundingDate": "2020",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "support@giftofhope.online",
+        "contactType": "Customer Service",
+        "areaServed": "Worldwide",
+        "availableLanguage": ["English", "Spanish", "French", "Arabic"]
+      },
+      "sameAs": [
+        "https://giftofhope.online"
+      ],
+      "areaServed": {
+        "@type": "Place",
+        "name": "Worldwide"
+      },
+      "knowsAbout": [
+        "Food Distribution",
+        "Education Support",
+        "Healthcare Services",
+        "Community Development",
+        "Poverty Relief",
+        "Humanitarian Aid"
+      ],
+      "makesOffer": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Food Distribution Programs",
+            "description": "Providing meals and food supplies to communities in need"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Education Support",
+            "description": "Supporting educational programs and literacy initiatives"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Healthcare Services",
+            "description": "Delivering essential healthcare and medical support"
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Website Schema with Site Name for Google Search -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://giftofhope.online/#website",
+      "url": "https://giftofhope.online",
+      "name": "Donate Now",
+      "alternateName": "GiftOfHope",
+      "description": "Global nonprofit organization helping families worldwide",
+      "publisher": {
+        "@id": "https://giftofhope.online/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://giftofhope.online/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://giftofhope.online"
+      }]
+    }
+    </script>
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "How do I make a donation to Gift of Hope?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can make a secure online donation through our donate page using PayPal. We accept donations in multiple currencies and provide instant receipts via email for all contributions."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is my donation tax-deductible?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, Gift of Hope is a registered nonprofit organization. All donations are tax-deductible to the fullest extent permitted by law. You will receive an email receipt for your records immediately after your donation."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Where does my donation go?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Your donation directly supports our programs in food distribution, education support, and healthcare services for underserved communities worldwide. We maintain complete transparency in how funds are allocated across our initiatives."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Can I donate to a specific campaign?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, you can choose to donate to specific active campaigns or make a general donation that supports all our programs. Visit our Campaigns page to see current fundraising initiatives and their progress."
+        }
+      }, {
+        "@type": "Question",
+        "name": "Is my payment information secure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. All donations are processed through PayPal's secure payment system with industry-standard encryption. We never store your credit card information on our servers."
+        }
+      }]
+    }
+    </script>
+    
+    <!-- Charity Action Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "DonateAction",
+      "name": "Donate to Gift of Hope",
+      "recipient": {
+        "@type": "NGO",
+        "name": "Gift of Hope"
+      },
+      "url": "https://giftofhope.online/donate"
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root">
+      <!-- Static skeleton that renders immediately, replaced by React when it loads -->
+      <div class="app">
+        <nav class="navigation">
+          <div class="nav-container">
+            <a href="/" class="nav-logo">
+              <div class="logo-container">
+                <svg class="logo-icon-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="url(#logo-gradient)"/>
+                  <defs>
+                    <linearGradient id="logo-gradient" x1="2" y1="3" x2="22" y2="21.35" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#8B5CF6"/>
+                      <stop offset="1" stop-color="#EC4899"/>
+                    </linearGradient>
+                  </defs>
+                </svg>
+                <div class="logo-text">Gift of Hope</div>
+              </div>
+            </a>
+            <div class="nav-menu">
+              <a href="/" class="nav-link">Home</a>
+              <a href="/about" class="nav-link">About</a>
+              <a href="/mission" class="nav-link">Mission</a>
+              <a href="/campaigns" class="nav-link">Campaigns</a>
+              <a href="/contact" class="nav-link">Contact</a>
+              <a href="/donate" class="nav-link btn-donate">Give Now</a>
+            </div>
+          </div>
+        </nav>
+        <main>
+          <div class="page home-page">
+            <section class="hero">
+              <div class="hero-content">
+                <h1>Together, We Bring Hope to Every Heart</h1>
+                <p class="hero-subtitle">
+                  Gift of Hope is a community-driven nonprofit helping families through food, education, and healthcare support. Every act of kindness can change a life.
+                </p>
+                <div class="hero-buttons">
+                  <a href="/donate" class="btn btn-primary btn-large">Donate Now</a>
+                  <a href="/about" class="btn btn-secondary btn-large">Our Story</a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

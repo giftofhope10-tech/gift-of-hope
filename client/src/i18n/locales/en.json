@@ -1,0 +1,59 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "mission": "Mission",
+    "campaigns": "Campaigns",
+    "contact": "Contact",
+    "donate": "Give Now"
+  },
+  "home": {
+    "hero": {
+      "title": "Together, We Bring Hope to Every Heart",
+      "subtitle": "Gift of Hope is a community-driven nonprofit helping families through food, education, and healthcare support. Every act of kindness can change a life.",
+      "donateBtn": "Donate Now",
+      "storyBtn": "Our Story"
+    },
+    "stats": {
+      "meals": "Meals Delivered",
+      "children": "Children Educated",
+      "families": "Families Supported"
+    },
+    "impact": {
+      "title": "Our Work in Action",
+      "subtitle": "See the real difference your contributions make in communities worldwide"
+    }
+  },
+  "donate": {
+    "title": "Make Your Contribution",
+    "subtitle": "Every donation creates real, measurable impact in communities worldwide",
+    "chooseImpact": "Choose Your Impact",
+    "yourName": "Your Name",
+    "amount": "Donation Amount",
+    "minDonation": "Minimum donation",
+    "whyGive": "Why Give With Us?",
+    "secure": "Safe & Secure",
+    "impactExamples": "Your Impact Examples"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "We'd love to hear from you. Reach out anytime!",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "subject": "Subject",
+      "message": "Your Message",
+      "send": "Send Message",
+      "sending": "Sending...",
+      "success": "Message Sent Successfully!"
+    }
+  },
+  "footer": {
+    "about": "About Us",
+    "mission": "Our Mission",
+    "impact": "Our Impact",
+    "contact": "Contact",
+    "privacy": "Privacy Policy",
+    "donate": "Donate Now"
+  }
+}
