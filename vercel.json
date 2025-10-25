@@ -3,7 +3,7 @@
   "crons": [
     {
       "path": "/api/cleanup-campaigns",
-      "schedule": "0 */6 * * *"
+      "schedule": "0 0 * * *"
     }
   ],
   "builds": [
