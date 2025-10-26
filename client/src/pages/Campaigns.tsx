@@ -169,6 +169,17 @@ export default function Campaigns() {
                       </p>
 
                       <div style={{ marginBottom: '20px' }}>
+                        <div style={{
+                          display: 'flex',
+                          justifyContent: 'space-between',
+                          marginBottom: '8px',
+                          fontSize: '14px',
+                          color: 'var(--text-secondary)'
+                        }}>
+                          <span>Raised: <strong style={{ color: 'var(--primary)' }}>${parseFloat(campaign.currentAmount).toLocaleString()}</strong></span>
+                          <span>Goal: <strong>${parseFloat(campaign.goalAmount).toLocaleString()}</strong></span>
+                        </div>
+                        
                         <div 
                           style={{
                             width: '100%',
@@ -186,7 +197,7 @@ export default function Campaigns() {
                           <div 
                             style={{
                               height: '100%',
-                              width: `${progress}%`,
+                              width: `${Math.max(parseFloat(progress), 0.5)}%`,
                               background: completed 
                                 ? 'linear-gradient(135deg, #10b981 0%, #059669 100%)'
                                 : 'linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%)',
