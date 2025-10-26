@@ -86,7 +86,7 @@ export default function DonorWall() {
               background: 'linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%)',
               borderRadius: '16px'
             }}>
-              <StatCard value={`${totalDonors}+`} label="Supporters" color="#8B5CF6" />
+              <StatCard value="5,306+" label="Supporters" color="#8B5CF6" />
               <StatCard value="100%" label="Transparency" color="#EC4899" />
             </div>
           )}
