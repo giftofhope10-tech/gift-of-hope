@@ -43,18 +43,6 @@ export default function DonorWall() {
     return colors[index % colors.length]
   }
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString)
-    const now = new Date()
-    const diffMs = now.getTime() - date.getTime()
-    const diffDays = Math.floor(diffMs / 86400000)
-
-    if (diffDays === 0) return 'Today'
-    if (diffDays === 1) return 'Yesterday'
-    if (diffDays < 30) return `${diffDays} days ago`
-    return date.toLocaleDateString()
-  }
-
   return (
     <div className="page">
       <div className="page-header" style={{
@@ -180,7 +168,7 @@ export default function DonorWall() {
                 {/* Table Header */}
                 <div style={{
                   display: 'grid',
-                  gridTemplateColumns: '50px 1fr auto auto',
+                  gridTemplateColumns: '50px 1fr auto',
                   gap: '16px',
                   padding: '16px 20px',
                   background: 'linear-gradient(135deg, #F9FAFB 0%, #F3F4F6 100%)',
@@ -194,7 +182,6 @@ export default function DonorWall() {
                   <div></div>
                   <div>Donor</div>
                   <div style={{ textAlign: 'right', minWidth: '100px' }}>Amount</div>
-                  <div style={{ textAlign: 'right', minWidth: '80px' }}>Date</div>
                 </div>
 
                 {/* Table Rows */}
@@ -204,7 +191,7 @@ export default function DonorWall() {
                       key={index} 
                       style={{
                         display: 'grid',
-                        gridTemplateColumns: '50px 1fr auto auto',
+                        gridTemplateColumns: '50px 1fr auto',
                         gap: '16px',
                         padding: '16px 20px',
                         borderBottom: index < donors.length - 1 ? '1px solid #F3F4F6' : 'none',
@@ -282,20 +269,6 @@ export default function DonorWall() {
                         }}>
                           {donor.currency} {parseFloat(donor.amount).toFixed(2)}
                         </div>
-                      </div>
-
-                      {/* Date */}
-                      <div style={{
-                        display: 'flex',
-                        alignItems: 'center',
-                        justifyContent: 'flex-end',
-                        fontSize: '0.85rem',
-                        color: '#6B7280',
-                        fontWeight: '500',
-                        minWidth: '80px',
-                        whiteSpace: 'nowrap'
-                      }}>
-                        {formatDate(donor.createdAt)}
                       </div>
                     </div>
                   ))}
@@ -394,15 +367,6 @@ export default function DonorWall() {
       <style>{`
         @keyframes spin {
           to { transform: rotate(360deg); }
-        }
-        
-        @media (max-width: 768px) {
-          div[style*="gridTemplateColumns"] {
-            grid-template-columns: 40px 1fr auto !important;
-          }
-          div[style*="minWidth: '80px'"] {
-            display: none !important;
-          }
         }
       `}</style>
     </div>
