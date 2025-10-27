@@ -72,7 +72,7 @@ export default async function handler(req: Request, res: Response) {
     
     if (path.includes('/donations') && req.method === 'GET') {
       if (!db) {
-        return res.json({ donations: [] });
+        return res.json([]);
       }
       
       const donationsList = await db.query.donations.findMany({
@@ -80,7 +80,7 @@ export default async function handler(req: Request, res: Response) {
         limit: 100,
       });
       
-      return res.json({ donations: donationsList });
+      return res.json(donationsList);
     }
     
     if (path.includes('/contacts') && req.method === 'GET') {
