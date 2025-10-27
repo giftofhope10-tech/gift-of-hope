@@ -1,8 +1,25 @@
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 export default function About() {
   return (
     <div className="page about-page">
+      <Helmet>
+        <title>About Us - Gift of Hope | Our Story & Mission</title>
+        <meta name="description" content="Learn about Gift of Hope's journey bringing compassion and action together. Discover our volunteer-driven humanitarian initiative supporting families through food, education, and healthcare." />
+        <meta name="keywords" content="gift of hope story, nonprofit mission, humanitarian organization, volunteer charity, global giving platform" />
+        <link rel="canonical" href="https://www.giftofhope.online/about" />
+        
+        <meta property="og:title" content="About Us - Gift of Hope" />
+        <meta property="og:description" content="Building bridges between compassion and action - discover Gift of Hope's humanitarian mission." />
+        <meta property="og:url" content="https://www.giftofhope.online/about" />
+        <meta property="og:type" content="website" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About Gift of Hope" />
+        <meta name="twitter:description" content="Our story of bringing compassion and action together to help families in need." />
+      </Helmet>
+      
       <section className="page-header">
         <h1>Our Story</h1>
         <p className="page-subtitle">Building bridges between compassion and action</p>

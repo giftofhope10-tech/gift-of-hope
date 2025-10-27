@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -79,6 +80,22 @@ export default function Contact() {
 
   return (
     <div className="page contact-page">
+      <Helmet>
+        <title>Contact Us - Gift of Hope | Get In Touch</title>
+        <meta name="description" content="Contact Gift of Hope for questions about donations, volunteering, partnerships, or our humanitarian programs. We're here to help and respond within 24-48 hours." />
+        <meta name="keywords" content="contact gift of hope, charity contact, donate questions, volunteer inquiry, nonprofit support, get in touch" />
+        <link rel="canonical" href="https://www.giftofhope.online/contact" />
+        
+        <meta property="og:title" content="Contact Us - Gift of Hope" />
+        <meta property="og:description" content="Get in touch with Gift of Hope for questions about donations, volunteering, or partnerships." />
+        <meta property="og:url" content="https://www.giftofhope.online/contact" />
+        <meta property="og:type" content="website" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Contact Gift of Hope" />
+        <meta name="twitter:description" content="We're here to help with questions about donations, volunteering, and our programs." />
+      </Helmet>
+      
       <section className="page-header">
         <h1>Get In Touch</h1>
         <p className="page-subtitle">We'd love to hear from you. Reach out anytime!</p>

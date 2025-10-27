@@ -1,13 +1,25 @@
 import { Link } from 'react-router-dom'
-import { useEffect } from 'react'
+import { Helmet } from 'react-helmet-async'
 
 export default function Mission() {
-  useEffect(() => {
-    document.title = 'Donate Now - Gift of Hope | Global Nonprofit'
-  }, [])
-
   return (
     <div className="page mission-page">
+      <Helmet>
+        <title>Our Mission & Vision - Gift of Hope | Transforming Lives</title>
+        <meta name="description" content="Discover Gift of Hope's mission to transform lives through purposeful giving. Learn about our vision for food security, education, healthcare, and humanitarian relief worldwide." />
+        <meta name="keywords" content="charity mission, nonprofit vision, humanitarian goals, global impact, purposeful giving, transform lives" />
+        <link rel="canonical" href="https://www.giftofhope.online/mission" />
+        
+        <meta property="og:title" content="Our Mission & Vision - Gift of Hope" />
+        <meta property="og:description" content="Transforming lives through purposeful giving - our mission for global humanitarian impact." />
+        <meta property="og:url" content="https://www.giftofhope.online/mission" />
+        <meta property="og:type" content="website" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Mission & Vision - Gift of Hope" />
+        <meta name="twitter:description" content="Transforming lives through purposeful giving and humanitarian support." />
+      </Helmet>
+      
       <section className="page-header">
         <h1>Our Mission & Vision</h1>
         <p className="page-subtitle">Transforming lives through purposeful giving</p>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 import StatCard from '../components/StatCard'
 
 interface RealDonor {
@@ -45,6 +46,22 @@ export default function DonorWall() {
 
   return (
     <div className="page">
+      <Helmet>
+        <title>Donor Wall - Gift of Hope | Our Generous Supporters</title>
+        <meta name="description" content="Celebrate Gift of Hope's generous donors and supporters. See real-time donations helping families in need through food, education, and healthcare programs worldwide." />
+        <meta name="keywords" content="donor wall, charitable donors, gift of hope supporters, donation recognition, generous giving, philanthropy community" />
+        <link rel="canonical" href="https://www.giftofhope.online/donor-wall" />
+        
+        <meta property="og:title" content="Donor Wall - Gift of Hope" />
+        <meta property="og:description" content="Celebrate our generous donors making a difference in families' lives worldwide." />
+        <meta property="og:url" content="https://www.giftofhope.online/donor-wall" />
+        <meta property="og:type" content="website" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Donor Wall - Gift of Hope" />
+        <meta name="twitter:description" content="Our community of generous supporters making a real difference." />
+      </Helmet>
+      
       <div className="page-header" style={{
         background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
         paddingTop: '60px',

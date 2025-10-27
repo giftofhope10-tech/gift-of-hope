@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { Helmet } from 'react-helmet-async'
 
 interface FAQItem {
   question: string
@@ -161,6 +162,22 @@ export default function FAQ() {
 
   return (
     <div className="page">
+      <Helmet>
+        <title>FAQ - Gift of Hope | Donation Questions & Answers</title>
+        <meta name="description" content="Find answers to frequently asked questions about donating to Gift of Hope. Learn about our mission, payment methods, tax deductions, security, transparency, and impact." />
+        <meta name="keywords" content="donation FAQ, charity questions, nonprofit FAQ, tax deductible donations, secure donations, gift of hope help" />
+        <link rel="canonical" href="https://www.giftofhope.online/faq" />
+        
+        <meta property="og:title" content="FAQ - Gift of Hope" />
+        <meta property="og:description" content="Get answers to common questions about donating to Gift of Hope and our humanitarian mission." />
+        <meta property="og:url" content="https://www.giftofhope.online/faq" />
+        <meta property="og:type" content="website" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="FAQ - Gift of Hope" />
+        <meta name="twitter:description" content="Common questions about donations, security, transparency, and our humanitarian impact." />
+      </Helmet>
+      
       <section className="page-header">
         <h1>Frequently Asked Questions</h1>
         <p className="page-subtitle">Everything you need to know about donating to Gift of Hope, our mission, security, and impact</p>

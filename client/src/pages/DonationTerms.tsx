@@ -1,8 +1,25 @@
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 export default function DonationTerms() {
   return (
     <div className="page privacy-page">
+      <Helmet>
+        <title>Donation Terms & Refund Policy - Gift of Hope | Transparent Giving</title>
+        <meta name="description" content="Learn about Gift of Hope's donation terms, refund policy, and how your contributions directly support families in need through food, education, and healthcare programs." />
+        <meta name="keywords" content="donation terms, refund policy, charitable giving, donation receipt, nonprofit transparency, gift of hope donations" />
+        <link rel="canonical" href="https://www.giftofhope.online/donation-terms" />
+        
+        <meta property="og:title" content="Donation Terms & Refund Policy - Gift of Hope" />
+        <meta property="og:description" content="Transparent donation terms and refund policy for Gift of Hope's humanitarian programs." />
+        <meta property="og:url" content="https://www.giftofhope.online/donation-terms" />
+        <meta property="og:type" content="website" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Donation Terms - Gift of Hope" />
+        <meta name="twitter:description" content="Learn how your donations support families in need through our transparent giving programs." />
+      </Helmet>
+      
       <section className="page-header">
         <h1>Donation Terms & Refund Policy</h1>
         <p className="page-subtitle">Understanding how your contributions help families in need</p>

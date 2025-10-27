@@ -1,8 +1,25 @@
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 export default function Disclaimer() {
   return (
     <div className="page privacy-page">
+      <Helmet>
+        <title>Disclaimer - Gift of Hope | Important Legal Information</title>
+        <meta name="description" content="Read Gift of Hope's disclaimer and important legal information about our volunteer-driven humanitarian initiative supporting families through food, education, and healthcare assistance." />
+        <meta name="keywords" content="gift of hope disclaimer, charity disclaimer, nonprofit legal information, donation policy, volunteer initiative" />
+        <link rel="canonical" href="https://www.giftofhope.online/disclaimer" />
+        
+        <meta property="og:title" content="Disclaimer - Gift of Hope" />
+        <meta property="og:description" content="Important legal information about Gift of Hope's volunteer-driven humanitarian initiative." />
+        <meta property="og:url" content="https://www.giftofhope.online/disclaimer" />
+        <meta property="og:type" content="website" />
+        
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:title" content="Disclaimer - Gift of Hope" />
+        <meta name="twitter:description" content="Important legal information about Gift of Hope's volunteer-driven humanitarian initiative." />
+      </Helmet>
+      
       <section className="page-header">
         <h1>Disclaimer</h1>
         <p className="page-subtitle">Important information about Gift of Hope</p>
