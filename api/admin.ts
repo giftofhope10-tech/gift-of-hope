@@ -153,6 +153,34 @@ export default async function handler(req: Request, res: Response) {
       return res.json({ success: true });
     }
     
+    if (path.match(/\/campaigns\/\d+/) && req.method === 'PUT') {
+      const id = parseInt(path.split('/').pop() || '0');
+      
+      if (!db || !id) {
+        return res.status(400).json({ error: 'Invalid request' });
+      }
+      
+      const { title, description, goalAmount, imageUrl, endDate } = req.body;
+      
+      const updates: any = {
+        title,
+        description,
+        goalAmount: parseFloat(goalAmount).toString(),
+        imageUrl: imageUrl || null,
+      };
+      
+      if (endDate) {
+        updates.endDate = new Date(endDate);
+      }
+      
+      const updatedCampaign = await db.update(campaigns)
+        .set(updates)
+        .where(eq(campaigns.id, id))
+        .returning();
+      
+      return res.json({ campaign: updatedCampaign[0] });
+    }
+    
     if (path.match(/\/campaigns\/\d+/) && req.method === 'DELETE') {
       const id = parseInt(path.split('/').pop() || '0');
       

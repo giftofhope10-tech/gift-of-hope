@@ -76,6 +76,7 @@ export default function Admin() {
   const [formSuccess, setFormSuccess] = useState('')
   const [currentPage, setCurrentPage] = useState(1)
   const [deleteConfirm, setDeleteConfirm] = useState<number | null>(null)
+  const [editingCampaign, setEditingCampaign] = useState<Campaign | null>(null)
   const campaignsPerPage = 10
 
   useEffect(() => {
@@ -214,6 +215,47 @@ export default function Admin() {
       }
     } catch (error) {
       setFormError('Error creating campaign. Please try again.')
+    }
+  }
+
+  const handleUpdateCampaign = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!editingCampaign) return
+    
+    setFormError('')
+    setFormSuccess('')
+
+    try {
+      const response = await fetch(`/api/admin/campaigns/${editingCampaign.id}`, {
+        method: 'PUT',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        credentials: 'include',
+        body: JSON.stringify(campaignForm)
+      })
+
+      const data = await response.json()
+
+      if (response.ok) {
+        setFormSuccess('Campaign updated successfully!')
+        setTimeout(() => {
+          setEditingCampaign(null)
+          setFormSuccess('')
+          setCampaignForm({
+            title: '',
+            description: '',
+            goalAmount: '',
+            endDate: '',
+            imageUrl: ''
+          })
+          fetchData()
+        }, 1500)
+      } else {
+        setFormError(data.message || 'Failed to update campaign')
+      }
+    } catch (error) {
+      setFormError('Error updating campaign. Please try again.')
     }
   }
 
@@ -436,7 +478,7 @@ export default function Admin() {
                     </button>
                   </div>
 
-                  {showCreateForm && (
+                  {(showCreateForm || editingCampaign) && (
                     <div style={{
                       position: 'fixed',
                       top: 0,
@@ -460,9 +502,9 @@ export default function Admin() {
                         padding: '32px'
                       }}>
                         <h3 style={{fontSize: '24px', fontWeight: '600', marginBottom: '24px', color: 'var(--text-primary)'}}>
-                          Create New Campaign
+                          {editingCampaign ? 'Edit Campaign' : 'Create New Campaign'}
                         </h3>
-                        <form onSubmit={handleCreateCampaign} style={{display: 'flex', flexDirection: 'column', gap: '20px'}}>
+                        <form onSubmit={editingCampaign ? handleUpdateCampaign : handleCreateCampaign} style={{display: 'flex', flexDirection: 'column', gap: '20px'}}>
                           <div>
                             <label htmlFor="title" style={{display: 'block', marginBottom: '8px', fontWeight: '500', color: 'var(--text-primary)'}}>
                               Campaign Title *
@@ -611,14 +653,22 @@ export default function Admin() {
                               className="btn btn-primary"
                               style={{flex: 1, padding: '12px', fontSize: '16px'}}
                             >
-                              Create Campaign
+                              {editingCampaign ? 'Update Campaign' : 'Create Campaign'}
                             </button>
                             <button
                               type="button"
                               onClick={() => {
                                 setShowCreateForm(false)
+                                setEditingCampaign(null)
                                 setFormError('')
                                 setFormSuccess('')
+                                setCampaignForm({
+                                  title: '',
+                                  description: '',
+                                  goalAmount: '',
+                                  endDate: '',
+                                  imageUrl: ''
+                                })
                               }}
                               className="btn btn-secondary"
                               style={{flex: 1, padding: '12px', fontSize: '16px'}}
@@ -706,21 +756,47 @@ export default function Admin() {
                                         </button>
                                       </>
                                     ) : (
-                                      <button
-                                        onClick={() => setDeleteConfirm(campaign.id)}
-                                        style={{
-                                          padding: '8px 16px',
-                                          background: '#fee2e2',
-                                          color: '#991b1b',
-                                          border: '1px solid #fecaca',
-                                          borderRadius: '6px',
-                                          cursor: 'pointer',
-                                          fontSize: '14px',
-                                          fontWeight: '600'
-                                        }}
-                                      >
-                                        🗑️ Delete
-                                      </button>
+                                      <>
+                                        <button
+                                          onClick={() => {
+                                            setEditingCampaign(campaign)
+                                            setCampaignForm({
+                                              title: campaign.title,
+                                              description: campaign.description,
+                                              goalAmount: campaign.goalAmount,
+                                              endDate: campaign.endDate ? new Date(campaign.endDate).toISOString().split('T')[0] : '',
+                                              imageUrl: campaign.imageUrl || ''
+                                            })
+                                          }}
+                                          style={{
+                                            padding: '8px 16px',
+                                            background: '#ddd6fe',
+                                            color: '#5b21b6',
+                                            border: '1px solid #c4b5fd',
+                                            borderRadius: '6px',
+                                            cursor: 'pointer',
+                                            fontSize: '14px',
+                                            fontWeight: '600'
+                                          }}
+                                        >
+                                          ✏️ Edit
+                                        </button>
+                                        <button
+                                          onClick={() => setDeleteConfirm(campaign.id)}
+                                          style={{
+                                            padding: '8px 16px',
+                                            background: '#fee2e2',
+                                            color: '#991b1b',
+                                            border: '1px solid #fecaca',
+                                            borderRadius: '6px',
+                                            cursor: 'pointer',
+                                            fontSize: '14px',
+                                            fontWeight: '600'
+                                          }}
+                                        >
+                                          🗑️ Delete
+                                        </button>
+                                      </>
                                     )}
                                   </div>
                                 </div>

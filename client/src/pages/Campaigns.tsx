@@ -139,7 +139,8 @@ export default function Campaigns() {
                         style={{
                           width: '100%',
                           height: '200px',
-                          objectFit: 'cover',
+                          objectFit: 'contain',
+                          background: 'var(--bg-secondary)',
                         }}
                         loading="lazy"
                       />
@@ -169,17 +170,6 @@ export default function Campaigns() {
                       </p>
 
                       <div style={{ marginBottom: '20px' }}>
-                        <div style={{
-                          display: 'flex',
-                          justifyContent: 'space-between',
-                          marginBottom: '8px',
-                          fontSize: '14px',
-                          color: 'var(--text-secondary)'
-                        }}>
-                          <span>Raised: <strong style={{ color: 'var(--primary)' }}>${parseFloat(campaign.currentAmount).toLocaleString()}</strong></span>
-                          <span>Goal: <strong>${parseFloat(campaign.goalAmount).toLocaleString()}</strong></span>
-                        </div>
-                        
                         <div 
                           style={{
                             width: '100%',
