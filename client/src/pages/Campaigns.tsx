@@ -133,17 +133,27 @@ export default function Campaigns() {
                     )}
                     
                     {campaign.imageUrl && (
-                      <img 
-                        src={campaign.imageUrl} 
-                        alt={campaign.title}
-                        style={{
-                          width: '100%',
-                          height: '200px',
-                          objectFit: 'contain',
-                          background: 'var(--bg-secondary)',
-                        }}
-                        loading="lazy"
-                      />
+                      <div style={{
+                        width: '100%',
+                        height: '280px',
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        background: 'var(--bg-secondary)',
+                        overflow: 'hidden'
+                      }}>
+                        <img 
+                          src={campaign.imageUrl} 
+                          alt={campaign.title}
+                          style={{
+                            width: '100%',
+                            height: '100%',
+                            objectFit: 'cover',
+                            objectPosition: 'center',
+                          }}
+                          loading="lazy"
+                        />
+                      </div>
                     )}
                     
                     <div style={{ padding: '24px' }}>
