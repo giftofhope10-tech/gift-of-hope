@@ -237,6 +237,15 @@ const donationLimiter = rateLimit({
   legacyHeaders: false,
 });
 
+const paymentCaptureLimiter = rateLimit({
+  windowMs: 5 * 60 * 1000,
+  max: 10,
+  message: 'Too many payment capture attempts, please try again later.',
+  validate: { trustProxy: trustProxyForRateLimiting },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
 app.use('/api/', generalLimiter);
 
 if (!isServerless) {
@@ -350,7 +359,7 @@ app.post('/order', donationLimiter, async (req, res, next) => {
   }
 });
 
-app.post('/order/:orderID/capture', async (req, res, next) => {
+app.post('/order/:orderID/capture', paymentCaptureLimiter, async (req, res, next) => {
   let pendingOrderId: number | null = null;
   const originalBodyHandler = res.json.bind(res);
   const originalStatusHandler = res.status.bind(res);

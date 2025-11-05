@@ -57,12 +57,18 @@ export default async function handler(req: Request, res: Response) {
       
       const token = jwt.sign({ admin: true }, JWT_SECRET, { expiresIn: '24h' });
       
-      res.setHeader('Set-Cookie', `adminToken=${token}; HttpOnly; Path=/; Max-Age=86400; SameSite=Strict`);
+      const isProduction = process.env.NODE_ENV === 'production';
+      const secureCookie = isProduction ? '; Secure' : '';
+      
+      res.setHeader('Set-Cookie', `adminToken=${token}; HttpOnly; Path=/; Max-Age=86400; SameSite=Strict${secureCookie}`);
       return res.json({ success: true, message: 'Logged in successfully' });
     }
     
     if (path.includes('/logout') && req.method === 'POST') {
-      res.setHeader('Set-Cookie', 'adminToken=; HttpOnly; Path=/; Max-Age=0');
+      const isProduction = process.env.NODE_ENV === 'production';
+      const secureCookie = isProduction ? '; Secure' : '';
+      
+      res.setHeader('Set-Cookie', `adminToken=; HttpOnly; Path=/; Max-Age=0${secureCookie}`);
       return res.json({ success: true, message: 'Logged out successfully' });
     }
     
