@@ -1,5 +1,6 @@
 import { useEffect, useState, useMemo, useCallback } from 'react'
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 interface Campaign {
   id: number
@@ -66,6 +67,26 @@ export default function Campaigns() {
 
   return (
     <div className="page campaigns-page">
+      <Helmet>
+        <title>Campaigns | Gift Of Hope - Global Charity Projects & Programs</title>
+        <meta name="description" content="Explore Gift Of Hope campaigns that provide food, education, and healthcare across communities. Join us in spreading global hope and kindness." />
+        <meta name="keywords" content="Charity Campaigns, Global Projects, Donation Programs, Nonprofit Activities, Food & Education Support, Gift Of Hope Campaigns, Global Charity" />
+        <link rel="canonical" href="https://www.giftofhope.online/campaigns" />
+        
+        <meta property="og:title" content="Campaigns | Gift Of Hope - Global Charity Projects & Programs" />
+        <meta property="og:description" content="Explore Gift Of Hope campaigns that provide food, education, and healthcare across communities. Join us in spreading global hope and kindness." />
+        <meta property="og:url" content="https://www.giftofhope.online/campaigns" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Gift Of Hope - Donation" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:image" content="https://www.giftofhope.online/logo-square.png" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Campaigns | Gift Of Hope - Global Charity Projects" />
+        <meta name="twitter:description" content="Explore our campaigns providing food, education, and healthcare across communities worldwide." />
+        <meta name="twitter:image" content="https://www.giftofhope.online/logo-square.png" />
+      </Helmet>
+      
       <section className="page-header" role="banner">
         <h1>Active Campaigns</h1>
         <p className="page-subtitle">

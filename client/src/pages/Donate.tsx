@@ -1,5 +1,6 @@
 import { useEffect, useState, useCallback, useMemo } from 'react'
 import { useNavigate, useSearchParams } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 declare global {
   interface Window {
@@ -256,6 +257,26 @@ export default function Donate() {
 
   return (
     <div className="page donate-page">
+      <Helmet>
+        <title>Donate | Gift Of Hope - Support Families with Food, Education & Healthcare</title>
+        <meta name="description" content="Make a secure online donation to Gift Of Hope. Your support provides food, education, and healthcare to underprivileged families around the world." />
+        <meta name="keywords" content="Donate Online, Gift Of Hope Donation, Charity Support, Help Families, Food Donation, Education Help, Healthcare Charity, Global Nonprofit, Secure Donation" />
+        <link rel="canonical" href="https://www.giftofhope.online/donate" />
+        
+        <meta property="og:title" content="Donate | Gift Of Hope - Support Families with Food, Education & Healthcare" />
+        <meta property="og:description" content="Make a secure online donation to Gift Of Hope. Your support provides food, education, and healthcare to underprivileged families around the world." />
+        <meta property="og:url" content="https://www.giftofhope.online/donate" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Gift Of Hope - Donation" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:image" content="https://www.giftofhope.online/logo-square.png" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Donate | Gift Of Hope - Support Families Worldwide" />
+        <meta name="twitter:description" content="Make a secure online donation to support families in need with food, education, and healthcare." />
+        <meta name="twitter:image" content="https://www.giftofhope.online/logo-square.png" />
+      </Helmet>
+      
       <section className="page-header">
         <h1>Make Your Contribution</h1>
         <p className="page-subtitle">

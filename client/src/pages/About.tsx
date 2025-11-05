@@ -5,19 +5,23 @@ export default function About() {
   return (
     <div className="page about-page">
       <Helmet>
-        <title>About Us - Gift of Hope | Our Story & Mission</title>
-        <meta name="description" content="Learn about Gift of Hope's journey bringing compassion and action together. Discover our volunteer-driven humanitarian initiative supporting families through food, education, and healthcare." />
-        <meta name="keywords" content="gift of hope story, nonprofit mission, humanitarian organization, volunteer charity, global giving platform" />
+        <title>About Us | Gift Of Hope - Global Nonprofit Donation Organization</title>
+        <meta name="description" content="Learn about Gift Of Hope - Donation, a trusted global nonprofit empowering communities through food, education, and healthcare programs. Together, we bring hope." />
+        <meta name="keywords" content="About Gift Of Hope, Nonprofit Organization, Donation Charity, NGO, Global Charity, Food and Education Support, Helping Families, Hope Mission" />
         <link rel="canonical" href="https://www.giftofhope.online/about" />
         
-        <meta property="og:title" content="About Us - Gift of Hope" />
-        <meta property="og:description" content="Building bridges between compassion and action - discover Gift of Hope's humanitarian mission." />
+        <meta property="og:title" content="About Us | Gift Of Hope - Global Nonprofit Donation Organization" />
+        <meta property="og:description" content="Learn about Gift Of Hope - Donation, a trusted global nonprofit empowering communities through food, education, and healthcare programs." />
         <meta property="og:url" content="https://www.giftofhope.online/about" />
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Gift Of Hope - Donation" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:image" content="https://www.giftofhope.online/logo-square.png" />
         
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About Gift of Hope" />
-        <meta name="twitter:description" content="Our story of bringing compassion and action together to help families in need." />
+        <meta name="twitter:title" content="About Us | Gift Of Hope - Global Nonprofit" />
+        <meta name="twitter:description" content="Learn about our trusted global nonprofit empowering communities worldwide." />
+        <meta name="twitter:image" content="https://www.giftofhope.online/logo-square.png" />
       </Helmet>
       
       <section className="page-header">

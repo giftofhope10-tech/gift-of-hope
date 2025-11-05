@@ -5,19 +5,23 @@ export default function Mission() {
   return (
     <div className="page mission-page">
       <Helmet>
-        <title>Our Mission & Vision - Gift of Hope | Transforming Lives</title>
-        <meta name="description" content="Discover Gift of Hope's mission to transform lives through purposeful giving. Learn about our vision for food security, education, healthcare, and humanitarian relief worldwide." />
-        <meta name="keywords" content="charity mission, nonprofit vision, humanitarian goals, global impact, purposeful giving, transform lives" />
+        <title>Our Mission | Gift Of Hope - Changing Lives Through Global Donations</title>
+        <meta name="description" content="At Gift Of Hope - Donation, our mission is to empower families through global donations that provide food, healthcare, and education to those in need." />
+        <meta name="keywords" content="Our Mission, Charity Goals, Nonprofit Vision, Humanitarian Aid, Donation Programs, Global Impact, Gift Of Hope Mission, Helping Families" />
         <link rel="canonical" href="https://www.giftofhope.online/mission" />
         
-        <meta property="og:title" content="Our Mission & Vision - Gift of Hope" />
-        <meta property="og:description" content="Transforming lives through purposeful giving - our mission for global humanitarian impact." />
+        <meta property="og:title" content="Our Mission | Gift Of Hope - Changing Lives Through Global Donations" />
+        <meta property="og:description" content="At Gift Of Hope - Donation, our mission is to empower families through global donations that provide food, healthcare, and education to those in need." />
         <meta property="og:url" content="https://www.giftofhope.online/mission" />
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Gift Of Hope - Donation" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:image" content="https://www.giftofhope.online/logo-square.png" />
         
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Mission & Vision - Gift of Hope" />
-        <meta name="twitter:description" content="Transforming lives through purposeful giving and humanitarian support." />
+        <meta name="twitter:title" content="Our Mission | Gift Of Hope" />
+        <meta name="twitter:description" content="Empowering families through global donations for food, healthcare, and education." />
+        <meta name="twitter:image" content="https://www.giftofhope.online/logo-square.png" />
       </Helmet>
       
       <section className="page-header">

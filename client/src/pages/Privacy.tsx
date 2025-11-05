@@ -5,19 +5,23 @@ export default function Privacy() {
   return (
     <div className="page privacy-page">
       <Helmet>
-        <title>Privacy Policy - Gift of Hope | Data Protection & Security</title>
-        <meta name="description" content="Read Gift of Hope's privacy policy. Learn how we protect your personal information, secure donation data, and maintain transparency in our data practices." />
-        <meta name="keywords" content="privacy policy, data protection, secure donations, personal information, GDPR compliance, nonprofit privacy" />
+        <title>Privacy Policy | Gift Of Hope - Secure Global Donation Platform</title>
+        <meta name="description" content="Gift Of Hope - Donation ensures your information and online contributions are safe and secure. Read our privacy policy to learn more." />
+        <meta name="keywords" content="Privacy Policy, Secure Donations, Nonprofit Data Protection, Charity Terms, Online Donation Safety, Gift Of Hope Privacy" />
         <link rel="canonical" href="https://www.giftofhope.online/privacy" />
         
-        <meta property="og:title" content="Privacy Policy - Gift of Hope" />
-        <meta property="og:description" content="Your privacy matters to us - learn how we protect your data and personal information." />
+        <meta property="og:title" content="Privacy Policy | Gift Of Hope - Secure Global Donation Platform" />
+        <meta property="og:description" content="Gift Of Hope - Donation ensures your information and online contributions are safe and secure. Read our privacy policy to learn more." />
         <meta property="og:url" content="https://www.giftofhope.online/privacy" />
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Gift Of Hope - Donation" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:image" content="https://www.giftofhope.online/logo-square.png" />
         
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="Privacy Policy - Gift of Hope" />
-        <meta name="twitter:description" content="Learn how we protect your personal information and donation data." />
+        <meta name="twitter:title" content="Privacy Policy | Gift Of Hope" />
+        <meta name="twitter:description" content="Learn how we ensure your information and online contributions are safe and secure." />
+        <meta name="twitter:image" content="https://www.giftofhope.online/logo-square.png" />
       </Helmet>
       
       <section className="page-header">

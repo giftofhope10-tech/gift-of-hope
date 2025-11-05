@@ -163,19 +163,23 @@ export default function FAQ() {
   return (
     <div className="page">
       <Helmet>
-        <title>FAQ - Gift of Hope | Donation Questions & Answers</title>
-        <meta name="description" content="Find answers to frequently asked questions about donating to Gift of Hope. Learn about our mission, payment methods, tax deductions, security, transparency, and impact." />
-        <meta name="keywords" content="donation FAQ, charity questions, nonprofit FAQ, tax deductible donations, secure donations, gift of hope help" />
+        <title>FAQs | Gift Of Hope - Donation Questions & Answers</title>
+        <meta name="description" content="Have questions about Gift Of Hope - Donation? Find answers about donations, programs, volunteering, and global support." />
+        <meta name="keywords" content="Donation FAQs, Gift Of Hope Help, Charity Questions, Nonprofit Info, Global Donation FAQ, Support Families, Online Giving" />
         <link rel="canonical" href="https://www.giftofhope.online/faq" />
         
-        <meta property="og:title" content="FAQ - Gift of Hope" />
-        <meta property="og:description" content="Get answers to common questions about donating to Gift of Hope and our humanitarian mission." />
+        <meta property="og:title" content="FAQs | Gift Of Hope - Donation Questions & Answers" />
+        <meta property="og:description" content="Have questions about Gift Of Hope - Donation? Find answers about donations, programs, volunteering, and global support." />
         <meta property="og:url" content="https://www.giftofhope.online/faq" />
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Gift Of Hope - Donation" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:image" content="https://www.giftofhope.online/logo-square.png" />
         
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" content="FAQ - Gift of Hope" />
-        <meta name="twitter:description" content="Common questions about donations, security, transparency, and our humanitarian impact." />
+        <meta name="twitter:title" content="FAQs | Gift Of Hope" />
+        <meta name="twitter:description" content="Find answers about donations, programs, volunteering, and global support." />
+        <meta name="twitter:image" content="https://www.giftofhope.online/logo-square.png" />
       </Helmet>
       
       <section className="page-header">

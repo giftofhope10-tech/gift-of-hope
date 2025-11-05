@@ -1,8 +1,29 @@
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet-async'
 
 export default function Home() {
   return (
     <div className="page home-page">
+      <Helmet>
+        <title>Gift Of Hope - Donation | Global Nonprofit Helping Families Worldwide</title>
+        <meta name="description" content="Gift Of Hope - Donation: A global nonprofit organization helping families through food, education, and healthcare. Donate securely online to bring hope worldwide." />
+        <meta name="keywords" content="Gift Of Hope, Donation, Global Nonprofit, Help Families, Charity Organization, Food Donation, Education Support, Healthcare Charity, Online Donation, Global NGO" />
+        <link rel="canonical" href="https://www.giftofhope.online/" />
+        
+        <meta property="og:title" content="Gift Of Hope - Donation | Global Nonprofit Helping Families Worldwide" />
+        <meta property="og:description" content="Join our global mission to provide food, education, and healthcare to families in need. Every donation makes a lasting impact." />
+        <meta property="og:url" content="https://www.giftofhope.online/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Gift Of Hope - Donation" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:image" content="https://www.giftofhope.online/logo-square.png" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Gift Of Hope | Global Nonprofit Empowering Communities" />
+        <meta name="twitter:description" content="Make a difference today. Donate to support food, education & healthcare programs for families worldwide." />
+        <meta name="twitter:image" content="https://www.giftofhope.online/logo-square.png" />
+      </Helmet>
+      
       <section className="hero">
         <img 
           src="/images/aid-worker-delivery.webp" 
